@@ -1,4 +1,5 @@
 /* Gobal Values */
+
 * {
 	color: #e1e1e1;
 	font-family: 'Quicksand', sans-serif;
@@ -17,4 +18,91 @@ body {
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-image: url(../Img/gradient.png);
+}
+.main {
+	margin: 1%;
+	padding: 10%;
+}
+ul {
+	list-style-type: none;
+}
+body {
+	font-family: Verdana, sans-serif;
+}
+
+.col-1 {
+	background-color: rgba(0, 0, 0, 0.3);
+}
+.task_adder {
+	margin: 0;
+	padding: 0;
+	background-color: rgba(0, 0, 0, 0.4);
+}
+/* Month header */
+.month {
+	padding: 70px 25px;
+	width: 100%;
+	text-align: center;
+}
+
+/* Month list */
+.month ul {
+	margin: 0;
+	padding: 0;
+}
+
+.month ul li {
+	color: e1e1e1;
+	font-size: 20px;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+}
+
+/* Previous button inside month header */
+.month .prev,
+.month {
+	float: left;
+	padding-top: 10px;
+}
+
+/* Next button */
+.next {
+	float: right;
+	padding-top: 10px;
+}
+
+/* Weekdays (Mon-Sun) */
+.weekdays {
+	margin: 0;
+	padding: 10px 0;
+}
+
+.weekdays li {
+	display: inline-block;
+	width: 13.6%;
+	color: #666;
+	text-align: center;
+}
+
+/* Days (1-31) */
+.days {
+	padding: 10px 0;
+	margin: 0;
+}
+
+.days li {
+	list-style-type: none;
+	display: inline-block;
+	width: 13.6%;
+	text-align: center;
+	margin-bottom: 5px;
+	font-size: 12px;
+	color: #777;
+}
+
+/* Highlight the "current" day */
+.days .active {
+	padding: 5px;
+	background: #666;
+	color: white !important;
 }

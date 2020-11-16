@@ -1,10 +1,8 @@
+
 const WINDOW_LENGTH = window.innerWidth
 const WINDOW_HEIGHT = window.innerHeight
 const start_button = $(".btn")[0]
 const backgrounds_url = ['../Img/Background_1.png', '../Img/Background_2.png']
-
-// let scroll_icon = $('.fa-caret-down')[0]
-// let scroll_icon_container = $('.scroll_icon')[0]
 
 
 $(".example_points1")[0].innerHTML = Math.floor(Math.random() * 91)+10
@@ -29,7 +27,7 @@ window.onscroll = function() {myFunction()};
 var header = document.getElementById("myHeader");
 
 // Get the offset position of the navbar
-var sticky = header.offsetTop;
+// var sticky = header.offsetTop; Gives an error
 
 // Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
 function myFunction() {
