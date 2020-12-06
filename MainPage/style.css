@@ -8,16 +8,180 @@
 html {
 	height: 100%;
 }
+body{
+  font-family: 'Lato', sans-serif;
+}
+@import 'https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300';
 
-body {
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
-	/* makes the graidents that does not repeat */
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-	background-image: url(../Img/gradient.png);
+
+
+div[class*=box] {
+  height: 33.33%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box-1 { background-color: #FF6766; }
+.box-2 { background-color: #3C3C3C; }
+.box-3 { background-color: #66A182; }
+
+.btn {
+  line-height: 50px;
+  height: 50px;
+  text-align: center;
+  width: 250px;
+  cursor: pointer;
+}
+
+/*
+========================
+      BUTTON ONE
+========================
+*/
+.btn-one {
+  color: #FFF;
+  transition: all 0.3s;
+  position: relative;
+}
+.btn-one span {
+  transition: all 0.3s;
+}
+.btn-one::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0;
+  transition: all 0.3s;
+  border-top-width: 1px;
+  border-bottom-width: 1px;
+  border-top-style: solid;
+  border-bottom-style: solid;
+  border-top-color: rgba(255,255,255,0.5);
+  border-bottom-color: rgba(255,255,255,0.5);
+  transform: scale(0.1, 1);
+}
+.btn-one:hover span {
+  letter-spacing: 2px;
+}
+.btn-one:hover::before {
+  opacity: 1;
+  transform: scale(1, 1);
+}
+.btn-one::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  transition: all 0.3s;
+  background-color: rgba(255,255,255,0.1);
+}
+.btn-one:hover::after {
+  opacity: 0;
+  transform: scale(0.1, 1);
+}
+
+
+/*
+========================
+      BUTTON TWO
+========================
+*/
+.btn-two {
+  color: #FFF;
+  transition: all 0.5s;
+  position: relative;
+}
+.btn-two span {
+  z-index: 2;
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.btn-two::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  transition: all 0.5s;
+  border: 1px solid rgba(255,255,255,0.2);
+  background-color: rgba(255,255,255,0.1);
+}
+.btn-two::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  transition: all 0.5s;
+  border: 1px solid rgba(255,255,255,0.2);
+  background-color: rgba(255,255,255,0.1);
+}
+.btn-two:hover::before {
+  transform: rotate(-45deg);
+  background-color: rgba(255,255,255,0);
+}
+.btn-two:hover::after {
+  transform: rotate(45deg);
+  background-color: rgba(255,255,255,0);
+}
+
+
+/*
+========================
+      BUTTON THREE
+========================
+*/
+.btn-three {
+  color: #FFF;
+  transition: all 0.5s;
+  position: relative;
+}
+.btn-three::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background-color: rgba(255,255,255,0.1);
+  transition: all 0.3s;
+}
+.btn-three:hover::before {
+  opacity: 0 ;
+  transform: scale(0.5,0.5);
+}
+.btn-three::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0;
+  transition: all 0.3s;
+  border: 1px solid rgba(255,255,255,0.5);
+  transform: scale(1.2,1.2);
+}
+.btn-three:hover::after {
+  opacity: 1;
+  transform: scale(1,1);
 }
 .main {
 	margin: 1%;
@@ -83,7 +247,186 @@ body {
 	color: #666;
 	text-align: center;
 }
+/* Gobal Values */
+* {
+	color: #e1e1e1;
+	font-family: 'Quicksand', sans-serif;
+}
 
+html {
+	height: 100%;
+}
+::-webkit-scrollbar {
+	width: 25px;
+}
+::-webkit-scrollbar-track {
+	border: 7px solid #232943;
+	box-shadow: inset 0 0 2.5px 2px rgba(0, 0, 0, .5);
+}
+::-webkit-scrollbar-thumb {
+	background: linear-gradient(45deg, #06dee1, #79ff6c);
+	border-radius: 3px;
+}
+body {
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	/* makes the graidents that does not repeat */
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-image: url(../Img/gradient.png);
+}
+#header {
+	padding: 1% 0;
+	letter-spacing: 3px;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+/* Need to move the icon to the right but idk how to make it work */
+.fas fa-bars {
+	display: flex;
+	align-self: flex-end;
+}
+#body {
+	text-align: center;
+	padding: 10%;
+}
+.section {
+	margin: 2% 0;
+}
+
+.section .container {
+	padding: 0 10%;
+}
+/* Start Section One */
+.section_one {
+	padding: 0 0 3%;
+}
+#main-text {
+	padding: 10%;
+	letter-spacing: 2px;
+}
+#main-text h1 {
+	font-size: 60px;
+}
+
+#main-text h3 {
+	font-size: 25px;
+}
+
+.btn {
+	margin-bottom: 8%;
+}
+.fa-caret-down {
+	display: flex;
+	justify-content: center;
+	transition-property: opacity;
+}
+/* Start of Section Two */
+.section_two {
+	text-align: center;
+	padding: 2% 0 5%;
+}
+.section_two div h1 {
+	font-size: 50px;
+}
+.section_two div p {
+	padding: 2%;
+	font-size: 30px;
+}
+/* Start of Section Three */
+.section_three {
+	text-align: center;
+	padding: 2% 0 5%;
+}
+.section_three div h1 {
+	font-size: 50px;
+}
+.section_three div p {
+	padding: 2%;
+	font-size: 30px;
+}
+/*
+
+
+
+ */
+
+/* Start of Section Four */
+.section_four {
+	text-align: center;
+	padding: 2% 0 5%;
+}
+.section_four div h1 {
+	font-size: 50px;
+}
+.point_example,
+.urgent_example {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	padding: 1%;
+	font-size: 20px;
+}
+.point_example h4,
+.urgent_example h4 {
+	font-size: 28px;
+}
+.point_example h5,
+.urgent_example h5 {
+	font-size: 25px;
+}
+.point_example h6,
+.urgent_example h6 {
+	font-size: 22px;
+}
+.time_left_example {
+	display: flex;
+	flex-direction: column;
+}
+.example_tasks {
+	padding: 0 2%;
+}
+.example_points1 {
+	padding: 2px 0 0 5px;
+}
+/*
+
+
+
+ */
+
+/* Start of Section Five */
+.section_five {
+	text-align: center;
+	padding: 2% 0 5%;
+}
+.section_five div h1 {
+	font-size: 50px;
+}
+.section_five div p {
+	padding: 2%;
+	font-size: 25px;
+}
+.section_two,
+.section_four {
+	background-color: rgba(0, 0, 0, .1);
+}
+/*
+
+
+ */
+a:link {
+	text-decoration: none;
+	color: #e1e1e1;
+	font-size: 20px;
+}
+.calendar{
+
+}
 /* Days (1-31) */
 .days {
 	padding: 10px 0;
