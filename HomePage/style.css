@@ -1,4 +1,7 @@
 /* Gobal Values */
+.submitbtn{
+	background-color: : green;
+}
 * {
 	color: #e1e1e1;
 	font-family: 'Quicksand', sans-serif;
@@ -100,7 +103,7 @@ body {
 	padding: 2%;
 	font-size: 30px;
 }
-/* 
+/*
 
 
 
@@ -144,7 +147,7 @@ body {
 .example_points1 {
 	padding: 2px 0 0 5px;
 }
-/* 
+/*
 
 
 
@@ -166,12 +169,12 @@ body {
 .section_four {
 	background-color: rgba(0, 0, 0, .1);
 }
-/* 
+/*
 
 
  */
 a:link {
 	text-decoration: none;
-	color: #e1e1e1;
+	color: #green;
 	font-size: 20px;
 }
